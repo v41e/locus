@@ -1,0 +1,47 @@
+name: Task
+description: Propose maintenance or operational work
+type: task
+labels:
+  - needs-triage
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the problem or limitation this work addresses.
+      placeholder: What is difficult, missing, or unclear today?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe the outcome or behavior you would like.
+      placeholder: What should become possible or improve?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe other solutions or workarounds you considered.
+      placeholder: Optional
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add relevant examples, constraints, screenshots, or prior work.
+      placeholder: Optional
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have read the CONTRIBUTING guide
+          required: true
+        - label: I have searched for existing issues and linked related reports if found
+          required: true

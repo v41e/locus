@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report incorrect behavior
+type: bug
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Summarize the problem and its impact.
+      placeholder: What failed, and who or what is affected?
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: Describe what currently happens.
+      placeholder: What did you observe?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+      placeholder: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reliable sequence that reproduces the problem.
+      placeholder: |-
+        1. Configure ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the relevant platform, runtime, application, or dependency versions.
+      placeholder: |-
+        - Operating system:
+        - Runtime or application version:
+        - Relevant dependency versions:
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Add supporting evidence without including sensitive information.
+      placeholder: Paste logs in code blocks or attach screenshots.
+    validations:
+      required: false
+  - type: textarea
+    id: fix
+    attributes:
+      label: Possible fix
+      description: Share any workaround or potential fix you have identified.
+      placeholder: Optional
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have read the CONTRIBUTING guide
+          required: true
+        - label: I have searched for existing issues and linked related reports if found
+          required: true
