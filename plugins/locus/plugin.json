@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "locus",
+  "version": "0.0.0",
+  "description": "Agent skills for finding, initializing, tracking, and distilling owned knowledge and active repository work.",
+  "author": {
+    "name": "v41e",
+    "url": "https://github.com/v41e"
+  },
+  "homepage": "https://github.com/v41e/locus",
+  "repository": "https://github.com/v41e/locus",
+  "license": "MIT",
+  "keywords": ["agent-skills", "knowledge", "memory", "docs", "locus"]
+}

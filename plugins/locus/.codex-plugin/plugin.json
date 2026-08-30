@@ -1,0 +1,30 @@
+{
+  "name": "locus",
+  "version": "0.0.0",
+  "description": "Agent skills for finding, initializing, tracking, and distilling owned knowledge and active repository work.",
+  "author": {
+    "name": "v41e",
+    "url": "https://github.com/v41e"
+  },
+  "homepage": "https://github.com/v41e/locus",
+  "repository": "https://github.com/v41e/locus",
+  "license": "MIT",
+  "keywords": ["agent-skills", "knowledge", "memory", "docs", "locus"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Locus",
+    "shortDescription": "Find knowledge and track active work.",
+    "longDescription": "Locus finds relevant repository knowledge and active work, creates or refreshes canonical docs, tracks repository work across local and GitHub surfaces, and distills transient evidence into durable owned knowledge.",
+    "developerName": "v41e",
+    "websiteURL": "https://github.com/v41e/locus",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Plan", "Summarize"],
+    "defaultPrompt": [
+      "Choose the smallest relevant Locus workflow.",
+      "Find or maintain owned knowledge and active work.",
+      "Track repository work or distill verified evidence when needed."
+    ]
+  }
+}
