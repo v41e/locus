@@ -44,6 +44,16 @@ do
   fi
 done
 
+jq -er '.packages["."]."extra-files"[]
+  | select(.type == "json" and .jsonpath == "$.version")
+  | .path' release-please-config.json | while IFS= read -r manifest
+do
+  if [ ! -f "$manifest" ]; then
+    echo "Release Please points to missing version file $manifest" >&2
+    exit 1
+  fi
+done
+
 jq -e '.plugins | type == "array" and length > 0' \
   .agents/plugins/marketplace.json >/dev/null
 
