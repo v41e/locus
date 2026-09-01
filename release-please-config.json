@@ -8,16 +8,8 @@
     ".": {
       "package-name": "locus",
       "extra-files": [
-        {
-          "type": "json",
-          "path": "plugins/locus/plugin.json",
-          "jsonpath": "$.version"
-        },
-        {
-          "type": "json",
-          "path": "plugins/locus/.codex-plugin/plugin.json",
-          "jsonpath": "$.version"
-        }
+        "plugins/locus/plugin.json",
+        "plugins/locus/.codex-plugin/plugin.json"
       ]
     }
   }

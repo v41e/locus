@@ -43,10 +43,10 @@ This repository has no data store.
 - **Codex delivery**: marketplace catalog under `.agents/`.
 - **Other clients**: direct installation from a compatible package under `plugins/`.
 - **Cloud provider**: none.
-- **CI/CD**: GitHub Actions validates repository invariants and pull-request
-  titles. Release Please opens version pull requests against `main`; merging one
-  creates a `vX.Y.Z` tag and GitHub Release without publishing to a package
-  registry.
+- **CI/CD**: GitHub Actions validates repository metadata and pull-request
+  titles, and applies the shared stale-item policy. Release Please opens version
+  pull requests against `main`; merging one creates a `vX.Y.Z` tag and GitHub
+  Release without publishing to a package registry.
 
 ## 6. Security Considerations
 
@@ -57,8 +57,8 @@ This repository has no data store.
 
 ## 7. Development & Testing Environment
 
-Run `./scripts/check-repository.sh` at the repository root. Follow the owning
-plugin's `AGENTS.md` for package-level checks and
+Validate repository metadata using the root [`AGENTS.md`](AGENTS.md) command.
+Follow the owning plugin's `AGENTS.md` for package-level checks and
 [`CONTRIBUTING.md`](CONTRIBUTING.md) for the repository workflow.
 
 ## 8. References
