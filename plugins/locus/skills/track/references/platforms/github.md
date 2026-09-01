@@ -21,13 +21,13 @@ without either.
 
 ## State Mapping
 
-| Logical concept                              | GitHub surface when available and authorized |
-| -------------------------------------------- | -------------------------------------------- |
-| Idea worth tracking                          | Project draft with the mapped backlog status |
+| Logical concept                             | GitHub surface when available and authorized |
+| ------------------------------------------- | -------------------------------------------- |
+| Idea worth tracking                         | Project draft with the mapped backlog status |
 | Work requiring a formal repository contract | Issue with a mapped native type or label     |
-| Approved formal specification and plan       | Separate Issue comments                      |
-| Ready / active / review / done               | Unambiguous Project status options           |
-| Delivery and verification                    | Pull request when the delivery path uses one |
+| Approved formal specification and plan      | Separate Issue comments                      |
+| Ready / active / review / done              | Unambiguous Project status options           |
+| Delivery and verification                   | Pull request when the delivery path uses one |
 
 ## Issue Bodies
 
