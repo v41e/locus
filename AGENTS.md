@@ -15,12 +15,12 @@ owning directory under `plugins/`.
 
 ## Commands
 
-- Catalog: `jq empty .agents/plugins/marketplace.json`.
+- Repository: `./scripts/check-repository.sh`.
 - Plugin checks belong to the owning directory under `plugins/`.
 
 ## Verification
 
-- Validate `.agents/plugins/marketplace.json` with `jq empty`.
+- Run `./scripts/check-repository.sh`.
 - Confirm catalog paths exist and the README plugin table matches the catalog.
 - Follow the owning plugin's `AGENTS.md` for plugin-level verification.
 

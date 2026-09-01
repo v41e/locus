@@ -16,16 +16,25 @@ If you discover a security issue, follow [SECURITY](SECURITY.md). Do not file pu
 
 This project follows [Semantic Versioning](https://semver.org).
 
+The repository uses one version across every plugin. Squash-merged pull-request
+titles drive releases: `fix` increments patch, `feat` increments minor, and a
+breaking-change marker increments major. Release Please proposes the version
+change, and the maintainer decides when to merge the release pull request.
+GitHub Releases are the release history; the repository does not maintain a
+separate changelog.
+
 ### Branching Model
 
 This project uses [git-flow-next](https://git-flow.sh):
 
 - **`main`**: production-ready releases
-- **`develop`**: integration and alpha releases
+- **`develop`**: integration
 - **`feature/*`** and **`bugfix/*`**: work targeting `develop`
 - **`release/*`**: release preparation from `develop`
 - **`hotfix/*`**: production fixes from `main`
 - **`support/*`**: maintenance for older releases
+
+Automated Release Please pull requests target `main`.
 
 ### Git Worktrees
 

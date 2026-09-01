@@ -25,6 +25,7 @@ flowchart LR
 - **Responsibility**: own each plugin's manifests, skills, documentation, and behavior.
 - **Key interactions**: compatible clients load the selected package; package
   details remain inside its owning directory.
+- **Versioning**: every plugin manifest shares the repository version.
 
 ## 3. Data Stores
 
@@ -42,7 +43,10 @@ This repository has no data store.
 - **Codex delivery**: marketplace catalog under `.agents/`.
 - **Other clients**: direct installation from a compatible package under `plugins/`.
 - **Cloud provider**: none.
-- **CI/CD**: none defined in this repository.
+- **CI/CD**: GitHub Actions validates repository invariants and pull-request
+  titles. Release Please opens version pull requests against `main`; merging one
+  creates a `vX.Y.Z` tag and GitHub Release without publishing to a package
+  registry.
 
 ## 6. Security Considerations
 
@@ -53,7 +57,7 @@ This repository has no data store.
 
 ## 7. Development & Testing Environment
 
-Validate marketplace metadata at the repository root. Follow the owning
+Run `./scripts/check-repository.sh` at the repository root. Follow the owning
 plugin's `AGENTS.md` for package-level checks and
 [`CONTRIBUTING.md`](CONTRIBUTING.md) for the repository workflow.
 
