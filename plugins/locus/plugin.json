@@ -10,5 +10,11 @@
   "homepage": "https://github.com/v41e/locus",
   "repository": "https://github.com/v41e/locus",
   "license": "MIT",
-  "keywords": ["agent-skills", "knowledge", "memory", "docs", "locus"]
+  "keywords": [
+    "agent-skills",
+    "knowledge",
+    "memory",
+    "docs",
+    "locus"
+  ]
 }
