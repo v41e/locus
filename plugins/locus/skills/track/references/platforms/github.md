@@ -21,13 +21,13 @@ without either.
 
 ## State Mapping
 
-| Logical concept                | GitHub surface when available and authorized |
-| ------------------------------ | -------------------------------------------- |
-| Idea worth tracking            | Project draft with the mapped backlog status |
-| Accepted repository work       | Issue with a mapped native type or label     |
-| Approved design and plan       | Separate Issue comments                      |
-| Ready / active / review / done | Unambiguous Project status options           |
-| Delivery and verification      | Pull request when the delivery path uses one |
+| Logical concept                             | GitHub surface when available and authorized |
+| ------------------------------------------- | -------------------------------------------- |
+| Idea worth tracking                         | Project draft with the mapped backlog status |
+| Work requiring a formal repository contract | Issue with a mapped native type or label     |
+| Approved formal specification and plan      | Separate Issue comments                      |
+| Ready / active / review / done              | Unambiguous Project status options           |
+| Delivery and verification                   | Pull request when the delivery path uses one |
 
 ## Issue Bodies
 
@@ -37,9 +37,9 @@ behavior`, `Reproduction`, and optional `Environment`, `Logs`, and `Possible
 fix`. Omit empty optional sections.
 
 Do not copy the Issue URL, Project URL, phase, Project fields, local Tracking
-section, specification, or plan into the initial body. Publish approved
-specification and plan snapshots as separate comments without local Tracking
-metadata.
+section, specification, or plan into the initial body. When approved local
+specification or plan artifacts exist, publish their snapshots as separate
+comments without local Tracking metadata.
 
 ## Metadata
 
@@ -55,7 +55,7 @@ Human Issue Forms and pull-request templates belong to the repository. Follow
 them when present. Otherwise use a compact pull request with a related-Issue
 link, Summary, Verification, and material Notes.
 
-Do not infer that every Bug or Task needs an Issue. When its workflow makes
+Do not infer that every work item needs an Issue. When its workflow makes
 tracking conditional and neither repository policy nor explicit intent resolves
 the condition, leave remote state unchanged and report what must be discovered.
 
