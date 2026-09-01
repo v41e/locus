@@ -15,12 +15,12 @@ owning directory under `plugins/`.
 
 ## Commands
 
-- Catalog: `jq empty .agents/plugins/marketplace.json`.
+- Metadata: `jq empty .agents/plugins/marketplace.json .release-please-manifest.json release-please-config.json plugins/locus/plugin.json plugins/locus/.codex-plugin/plugin.json`.
 - Plugin checks belong to the owning directory under `plugins/`.
 
 ## Verification
 
-- Validate `.agents/plugins/marketplace.json` with `jq empty`.
+- Validate repository and plugin JSON with the metadata command.
 - Confirm catalog paths exist and the README plugin table matches the catalog.
 - Follow the owning plugin's `AGENTS.md` for plugin-level verification.
 
