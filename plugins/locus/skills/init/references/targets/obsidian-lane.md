@@ -13,10 +13,10 @@ Use this destination when the knowledge surface is local to a top-level vault la
 
 ## Files
 
-| Document    | Path                           | Template                                                       |
-| ----------- | ------------------------------ | -------------------------------------------------------------- |
-| `README.md` | `<lane-name>/README.md`        | [README.md](../../assets/templates/obsidian-lane/README.md)     |
-| `AGENTS.md` | `<lane-name>/AGENTS.md`        | [AGENTS.md](../../assets/templates/obsidian-lane/AGENTS.md)     |
+| Document    | Path                    | Template                                                    |
+| ----------- | ----------------------- | ----------------------------------------------------------- |
+| `README.md` | `<lane-name>/README.md` | [README.md](../../assets/templates/obsidian-lane/README.md) |
+| `AGENTS.md` | `<lane-name>/AGENTS.md` | [AGENTS.md](../../assets/templates/obsidian-lane/AGENTS.md) |
 
 ## Guidance
 

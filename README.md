@@ -6,8 +6,8 @@ Public Agent Plugin repository for platform-independent knowledge workflows.
 
 The marketplace currently contains:
 
-| Plugin                           | Purpose                                                                                                      |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Plugin                           | Purpose                                                                                       |
+| -------------------------------- | --------------------------------------------------------------------------------------------- |
 | [Locus](plugins/locus/README.md) | Discover, initialize, track, and distill knowledge and active work across owned destinations. |
 
 ## Structure
@@ -40,4 +40,4 @@ contribution expectations.
 
 ## License
 
-Locus is licensed under the [MIT License](LICENSE).
+This project is licensed under the terms of the [LICENSE](LICENSE).

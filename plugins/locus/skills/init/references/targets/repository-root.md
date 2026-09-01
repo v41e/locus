@@ -33,10 +33,10 @@ be verified from repository remotes or existing tracker documentation.
 
 ## Files
 
-| Document          | Path              | Template                                                               |
-| ----------------- | ----------------- | ---------------------------------------------------------------------- |
-| `README.md`       | `README.md`       | [README.md](../../assets/templates/repository-root/README.md)           |
-| `AGENTS.md`       | `AGENTS.md`       | [AGENTS.md](../../assets/templates/repository-root/AGENTS.md)           |
+| Document          | Path              | Template                                                                  |
+| ----------------- | ----------------- | ------------------------------------------------------------------------- |
+| `README.md`       | `README.md`       | [README.md](../../assets/templates/repository-root/README.md)             |
+| `AGENTS.md`       | `AGENTS.md`       | [AGENTS.md](../../assets/templates/repository-root/AGENTS.md)             |
 | `ARCHITECTURE.md` | `ARCHITECTURE.md` | [ARCHITECTURE.md](../../assets/templates/repository-root/ARCHITECTURE.md) |
 
 ## Guidance
