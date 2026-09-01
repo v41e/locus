@@ -20,18 +20,18 @@ change, not a runtime map lookup.
 
 Select exactly one mode and one target. Read both selected references completely.
 
-| Mode    | Use when                                                                         | Reference                                      |
-| ------- | -------------------------------------------------------------------------------- | ---------------------------------------------- |
-| Create  | Every selected document is missing                                               | [create.md](references/modes/create.md)        |
-| Refresh | Any selected document exists; includes non-destructive migration or alignment    | [refresh.md](references/modes/refresh.md)      |
-| Reset   | The user explicitly requests replacement and names the exact selected documents  | [reset.md](references/modes/reset.md)          |
+| Mode    | Use when                                                                        | Reference                                 |
+| ------- | ------------------------------------------------------------------------------- | ----------------------------------------- |
+| Create  | Every selected document is missing                                              | [create.md](references/modes/create.md)   |
+| Refresh | Any selected document exists; includes non-destructive migration or alignment   | [refresh.md](references/modes/refresh.md) |
+| Reset   | The user explicitly requests replacement and names the exact selected documents | [reset.md](references/modes/reset.md)     |
 
-| Target                       | Use when                                         | Reference                                                        |
-| ---------------------------- | ------------------------------------------------ | ---------------------------------------------------------------- |
-| Repository root              | The knowledge surface is repository-wide         | [repository-root.md](references/targets/repository-root.md)       |
+| Target                       | Use when                                             | Reference                                                         |
+| ---------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------- |
+| Repository root              | The knowledge surface is repository-wide             | [repository-root.md](references/targets/repository-root.md)       |
 | Repository package or plugin | The surface is local to a package or plugin boundary | [repository-package.md](references/targets/repository-package.md) |
-| Obsidian root                | The knowledge surface is vault-wide              | [obsidian-root.md](references/targets/obsidian-root.md)           |
-| Obsidian lane                | The knowledge surface is local to a top-level lane | [obsidian-lane.md](references/targets/obsidian-lane.md)           |
+| Obsidian root                | The knowledge surface is vault-wide                  | [obsidian-root.md](references/targets/obsidian-root.md)           |
+| Obsidian lane                | The knowledge surface is local to a top-level lane   | [obsidian-lane.md](references/targets/obsidian-lane.md)           |
 
 ## Structure Contract
 

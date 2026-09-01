@@ -12,7 +12,11 @@ canonical.
 
 1. Read the nearest instructions and contribution policy; follow explicit links
    before searching broadly.
-2. Classify the work and read exactly one workflow.
+2. Before executing tracked work, whether new or resumed, compare the newest
+   explicit human intent, current repository state, and tracked artifacts. If
+   they diverge materially, return to the earliest affected phase and update or
+   retire stale artifacts before execution.
+3. Classify the work and read exactly one workflow.
 
 | Work    | Trigger                                      | Workflow                                      |
 | ------- | -------------------------------------------- | --------------------------------------------- |
@@ -20,7 +24,7 @@ canonical.
 | Bug     | Observed behavior contradicts an expectation | [bug.md](references/workflows/bug.md)         |
 | Task    | Maintenance is neither a Feature nor a Bug   | [task.md](references/workflows/task.md)       |
 
-3. The workflow owns phase order. Read its first incomplete phase. Use a named
+4. The workflow owns phase order. Read its first incomplete phase. Use a named
    phase only when it belongs to that workflow and prior gates are complete.
 
 | Phase     | Reference                                      |
@@ -34,13 +38,13 @@ canonical.
 | Review    | [review.md](references/phases/review.md)       |
 | Complete  | [complete.md](references/phases/complete.md)   |
 
-4. Select a platform only when it owns work state.
+5. Select a platform only when it owns work state.
 
 | Platform | Use when                 | Reference                                   |
 | -------- | ------------------------ | ------------------------------------------- |
 | GitHub   | GitHub owns remote state | [github.md](references/platforms/github.md) |
 
-5. Select an integration only when it is available and relevant.
+6. Select an integration only when it is available and relevant.
 
 | Integration | Use when                                  | Reference                                                |
 | ----------- | ----------------------------------------- | -------------------------------------------------------- |
