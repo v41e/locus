@@ -12,10 +12,10 @@ canonical.
 
 1. Read the nearest instructions and contribution policy; follow explicit links
    before searching broadly.
-2. Before resuming tracked work, compare the newest explicit human intent,
-   current repository state, and tracked artifacts. If they diverge materially,
-   return to the earliest affected phase and update or retire stale artifacts
-   before execution.
+2. Before executing tracked work, whether new or resumed, compare the newest
+   explicit human intent, current repository state, and tracked artifacts. If
+   they diverge materially, return to the earliest affected phase and update or
+   retire stale artifacts before execution.
 3. Classify the work and read exactly one workflow.
 
 | Work    | Trigger                                      | Workflow                                      |
