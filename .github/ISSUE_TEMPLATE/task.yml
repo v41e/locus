@@ -1,6 +1,8 @@
 name: Task
 description: Propose maintenance or operational work
 type: task
+labels:
+  - needs-triage
 body:
   - type: textarea
     id: problem

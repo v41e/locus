@@ -3,6 +3,7 @@ description: Report incorrect behavior
 type: bug
 labels:
   - bug
+  - needs-triage
 body:
   - type: textarea
     id: description
