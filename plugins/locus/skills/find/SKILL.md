@@ -17,9 +17,9 @@ broaden only when the task requires context outside local files.
 
 Load at most one platform when the task requires context outside local files.
 
-| Platform      | Use when                                             | Reference                                               |
-| ------------- | ---------------------------------------------------- | ------------------------------------------------------- |
-| GitHub        | Remote shaping, delivery, or review context is needed | [github.md](references/platforms/github.md)             |
+| Platform      | Use when                                               | Reference                                                 |
+| ------------- | ------------------------------------------------------ | --------------------------------------------------------- |
+| GitHub        | Remote shaping, delivery, or review context is needed  | [github.md](references/platforms/github.md)               |
 | Knowledge map | A destination outside the current repository is needed | [knowledge-map.md](references/platforms/knowledge-map.md) |
 
 ## Workflow
