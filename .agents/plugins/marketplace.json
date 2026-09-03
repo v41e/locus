@@ -1,8 +1,7 @@
 {
-  "name": "locus",
+  "name": "v41e",
   "interface": {
-    "displayName": "Locus",
-    "shortDescription": "Find active work and evolve owned knowledge."
+    "displayName": "v41e"
   },
   "plugins": [
     {

@@ -6,8 +6,8 @@
     "name": "v41e",
     "url": "https://github.com/v41e"
   },
-  "homepage": "https://github.com/v41e/locus",
-  "repository": "https://github.com/v41e/locus",
+  "homepage": "https://github.com/v41e/plugins",
+  "repository": "https://github.com/v41e/plugins",
   "license": "MIT",
   "keywords": [
     "agent-skills",
@@ -22,7 +22,7 @@
     "shortDescription": "Find knowledge and track active work.",
     "longDescription": "Locus finds relevant repository knowledge and active work, creates or refreshes canonical docs, tracks repository work across local and GitHub surfaces, and distills transient evidence into durable owned knowledge.",
     "developerName": "v41e",
-    "websiteURL": "https://github.com/v41e/locus",
+    "websiteURL": "https://github.com/v41e/plugins",
     "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
     "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
     "category": "Productivity",
