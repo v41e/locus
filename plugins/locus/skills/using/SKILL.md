@@ -5,19 +5,34 @@ description: Use when the user or agent needs to understand Locus, choose among 
 
 # Using Locus
 
-Choose one capability from the current evidence:
+Route the request to the smallest matching skill or required sequence.
 
-| Need                                                                | Skill           |
-| ------------------------------------------------------------------- | --------------- |
-| Locate the smallest verified owner or active-work context           | `locus:find`    |
-| Create, refresh, align, migrate, or explicitly reset canonical docs | `locus:init`    |
-| Classify, resume, or synchronize repository work                    | `locus:track`   |
-| Promote verified transient evidence into durable ownership          | `locus:distill` |
+## Route
 
-Start with `find` when ownership or active state is unclear. Use `track` for the
-work lifecycle, then `distill` at completion when durable knowledge may have
-changed. Use `init` only for the requested canonical document operation.
+| Need                          | Route           | Boundary          |
+| ----------------------------- | --------------- | ----------------- |
+| Explain Locus or select skill | Answer here     | No child skill    |
+| Find owner or active work     | `locus:find`    | Read only         |
+| Maintain canonical docs       | `locus:init`    | Verified owner    |
+| Track repository work         | `locus:track`   | Lifecycle only    |
+| Promote durable evidence      | `locus:distill` | Authorized writes |
 
-Read the selected skill completely before acting. Load optional integrations
-only when installed and relevant. Return the chosen skill, why it matches, its
-boundary, and the smallest safe next action.
+## Sequences
+
+- For orientation, answer here; invoke no child skill.
+- For an action with unclear ownership or active state, use `locus:find`
+  first, then route again with verified context.
+- Route completed evidence to `locus:distill` directly. It writes only when
+  explicitly authorized; otherwise it proposes. After `locus:track`, use it
+  only for a separate durable-knowledge update.
+
+## Output
+
+Return the current route, reason, boundary, next handoff when present, and
+smallest safe action.
+
+## Rules
+
+- `using` explains and routes; the selected skill owns action.
+- Read the selected skill completely before acting.
+- Invoke only installed skills whose conditions match.
