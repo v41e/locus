@@ -18,6 +18,7 @@ distilling verified evidence, and choosing the smallest matching workflow.
   - [`plugin.json`](.codex-plugin/plugin.json): Codex identity and interface metadata
 - [`examples/`](examples/): generic, publishable examples:
   - [`knowledge-map/`](examples/knowledge-map/AGENTS.md): private knowledge-map starting point
+- [`evals/`](evals/): repeatable, non-runtime skill behavior checks
 - [`skills/`](skills/): shared instruction-driven workflows:
   - [`find/`](skills/find/SKILL.md): owned-knowledge and active-work discovery
   - [`init/`](skills/init/SKILL.md): knowledge-document creation, refresh, and templates
@@ -30,8 +31,8 @@ distilling verified evidence, and choosing the smallest matching workflow.
 
 1. Add this directory through a compatible client's plugin installation flow.
 2. Start a new task so the client loads the skills.
-3. Use `using` when selection is unclear, or invoke `find`, `init`, `track`, or
-   `distill` directly for the matching lifecycle need.
+3. Use `locus:using` when selection is unclear, or invoke `locus:find`,
+   `locus:init`, `locus:track`, or `locus:distill` for the matching need.
 
 ## Configuration
 

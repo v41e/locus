@@ -1,6 +1,6 @@
 ---
 name: track
-description: Use when repository work must be classified, resumed, or synchronized across local drafts, specifications, plans, GitHub Projects, Issues, pull requests, and completion state.
+description: Use when repository work must be classified, resumed, or synchronized through Feature, Bug, or Task phases and optional remote tracking.
 ---
 
 # Track
@@ -10,13 +10,14 @@ canonical.
 
 ## Route
 
-1. Read the nearest instructions and contribution policy; follow explicit links
-   before searching broadly.
-2. Before executing tracked work, whether new or resumed, compare the newest
-   explicit human intent, current repository state, and tracked artifacts. If
-   they diverge materially, return to the earliest affected phase and update or
-   retire stale artifacts before execution.
-3. Classify the work and read exactly one workflow.
+1. Read current Git metadata, nearest instructions, and contribution policy.
+   Follow explicit links first. Treat the current repository as owner when this
+   evidence establishes it; use `locus:find` only when ownership or active-work
+   context remains unclear.
+2. Compare the newest explicit human intent and current repository state with
+   tracked artifacts. If they differ materially, return to the earliest affected
+   phase and update or retire stale artifacts.
+3. Classify the work and read one workflow.
 
 | Work    | Trigger                                      | Workflow                                      |
 | ------- | -------------------------------------------- | --------------------------------------------- |
@@ -24,31 +25,13 @@ canonical.
 | Bug     | Observed behavior contradicts an expectation | [bug.md](references/workflows/bug.md)         |
 | Task    | Maintenance is neither a Feature nor a Bug   | [task.md](references/workflows/task.md)       |
 
-4. The workflow owns phase order. Read its first incomplete phase. Use a named
-   phase only when it belongs to that workflow and prior gates are complete.
-
-| Phase     | Reference                                      |
-| --------- | ---------------------------------------------- |
-| Ideate    | [ideate.md](references/phases/ideate.md)       |
-| Design    | [design.md](references/phases/design.md)       |
-| Plan      | [plan.md](references/phases/plan.md)           |
-| Triage    | [triage.md](references/phases/triage.md)       |
-| Scope     | [scope.md](references/phases/scope.md)         |
-| Implement | [implement.md](references/phases/implement.md) |
-| Review    | [review.md](references/phases/review.md)       |
-| Complete  | [complete.md](references/phases/complete.md)   |
-
-5. Select a platform only when it owns work state.
-
-| Platform | Use when                 | Reference                                   |
-| -------- | ------------------------ | ------------------------------------------- |
-| GitHub   | GitHub owns remote state | [github.md](references/platforms/github.md) |
-
-6. Select an integration only when it is available and relevant.
-
-| Integration | Use when                                  | Reference                                                |
-| ----------- | ----------------------------------------- | -------------------------------------------------------- |
-| Superpowers | Matching Superpowers skills are installed | [superpowers.md](references/integrations/superpowers.md) |
+4. Follow the workflow's order and read its linked first incomplete phase.
+   Never use a phase outside that workflow or before earlier gates pass.
+5. When GitHub owns remote state, read the [GitHub adapter](references/platforms/github.md)
+   and its current phase reference.
+6. When matching Superpowers skills are installed, read the
+   [Superpowers integration](references/integrations/superpowers.md) and its
+   current phase reference.
 
 ## Workflow
 
