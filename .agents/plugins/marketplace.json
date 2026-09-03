@@ -1,8 +1,8 @@
 {
-  "name": "locus",
+  "name": "plugins",
   "interface": {
-    "displayName": "Locus",
-    "shortDescription": "Find active work and evolve owned knowledge."
+    "displayName": "v41e Plugins",
+    "shortDescription": "Public Agent Plugins by v41e."
   },
   "plugins": [
     {

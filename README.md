@@ -1,8 +1,8 @@
-# Locus
+# v41e Plugins
 
 ## Overview
 
-Public Agent Plugin repository for platform-independent knowledge workflows.
+Public marketplace for v41e Agent Plugins.
 
 The marketplace currently contains:
 
@@ -27,8 +27,8 @@ compatible client at that directory using the client's installation process.
 With Codex:
 
 ```sh
-codex plugin marketplace add https://github.com/v41e/locus
-codex plugin add locus@locus
+codex plugin marketplace add https://github.com/v41e/plugins
+codex plugin add locus@plugins
 ```
 
 Start a new task after installation or upgrade so the plugin skills are loaded.
