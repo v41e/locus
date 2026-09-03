@@ -1,0 +1,101 @@
+{
+  "kind": "plugin-eval-benchmark",
+  "schemaVersion": 2,
+  "version": 2,
+  "targetKind": "skill",
+  "targetName": "track",
+  "runner": {
+    "type": "codex-cli",
+    "model": "gpt-5.4-mini",
+    "sandbox": "workspace-write",
+    "approvalPolicy": "never",
+    "extraArgs": []
+  },
+  "workspace": {
+    "sourcePath": ".",
+    "setupMode": "copy",
+    "preserve": "on-failure"
+  },
+  "targetProvisioning": {
+    "mode": "isolated-skill-home"
+  },
+  "verifiers": {
+    "commands": []
+  },
+  "notes": [
+    "Run from the Locus plugin root. Scenarios are decision dry runs and must not mutate GitHub."
+  ],
+  "scenarios": [
+    {
+      "id": "proportional-config-task",
+      "title": "Keep a configuration-only Task proportional",
+      "purpose": "Verify that installed process skills are selected by their conditions instead of invoked for ceremony.",
+      "userInput": "Use locus:track for a formatter-configuration-only Task. Repository policy explicitly permits a direct change with no Issue or pull request. Every optional workflow skill is installed, and the user asks for maximum quality quickly. Dry-run the lifecycle and list every Superpowers skill you would invoke. Do not edit files or mutate remote state.",
+      "successChecklist": [
+        "The response uses Scope, Implement, Review, and Complete without creating unnecessary artifacts or remote records.",
+        "It does not select test-driven-development merely because the change is small, linear, or configuration-only.",
+        "It selects fresh verification before a completion claim and does not invoke unrelated installed skills."
+      ]
+    },
+    {
+      "id": "planned-feature-topology",
+      "title": "Choose the right planned Feature executor",
+      "purpose": "Distinguish current-task plan execution, parallel investigation, coupled implementation, debugging, and review.",
+      "userInput": "Use locus:track for an approved multi-task Feature plan executed in the current task. Its tasks are mostly independent, but two implementation tasks share an interface and must remain sequential; per-task independent review is valuable. An integration test unexpectedly fails. Delivery is a pull request to non-default branch develop. Dry-run Implement through Complete and list every Superpowers skill selected. Do not edit files or mutate remote state.",
+      "successChecklist": [
+        "It reads only the Implement, Review, and Complete phase files in workflow order.",
+        "It selects subagent-driven-development because the plan is mostly independent and preserves its per-task reviewer and final whole-branch review.",
+        "It may parallelize the independent investigations but does not parallelize coupled implementation writers.",
+        "It selects systematic-debugging for the unexpected failure and verification-before-completion only in Complete.",
+        "It requests independent code review when not already supplied by repository policy and states that non-default closing keywords do not close the Issue."
+      ]
+    },
+    {
+      "id": "project-draft-boundary",
+      "title": "Respect the GitHub Project draft boundary",
+      "purpose": "Verify that GitHub Project fields and Issue-only metadata are not conflated.",
+      "userInput": "Use locus:track for a Feature idea accepted only for backlog capture. It has no remaining product or design questions, but the human has not approved a formal Design or repository contract, and its repository owner remains unresolved. An organization Project has an evidenced Backlog status plus Priority High and Effort Small options. A repository label feature, Issue Type Feature, milestone 2026 Q4, and an Issue dependency are also known. Dry-run the GitHub mutations for the Project draft. Do not edit files or mutate remote state.",
+      "successChecklist": [
+        "It creates at most one Project draft and sets only title, body, assignees when real, and mapped Project custom fields.",
+        "It sets Backlog, Priority High, and Effort Small when their mappings are evidenced.",
+        "It defers repository, label, Issue Type, milestone, and Issue relationships until conversion to an Issue.",
+        "It does not invoke brainstorming merely to persist already-shaped backlog metadata.",
+        "It stops at Design readiness without creating an Issue, specification, plan, branch, or implementation."
+      ]
+    },
+    {
+      "id": "repository-owner-routing",
+      "title": "Use current repository ownership before broader discovery",
+      "purpose": "Verify that locus:find is a fallback rather than routine ceremony.",
+      "userInput": "Use locus:track for two dry-run inputs. First, the current Git repository metadata and nearest instructions clearly own a repository-local Task. Second, a Feature explicitly spans two repositories and neither instructions nor tracked artifacts identify the owner. State whether locus:find is needed in each case and why. Do not edit files or mutate remote state.",
+      "successChecklist": [
+        "It treats the current repository as owner in the first input without invoking locus:find.",
+        "It invokes locus:find only for the unresolved cross-repository input.",
+        "It does not guess an owner when available evidence is insufficient."
+      ]
+    },
+    {
+      "id": "phase-scoped-superpowers",
+      "title": "Keep Superpowers inside the current workflow phase",
+      "purpose": "Verify that Bug and Task work can use planning aids without inventing Feature phases.",
+      "userInput": "Use locus:track for two dry runs. First, a Bug is in Triage with an unknown root cause and may need a risky multi-step fix. Second, a Task is in Scope with material solution choices and likely needs written execution steps. Name the Locus phase and eligible Superpowers skills now and after each gate. Do not edit files or mutate remote state.",
+      "successChecklist": [
+        "It selects skills only from the current Locus phase.",
+        "It starts the Bug with systematic-debugging and considers brainstorming or writing-plans only after diagnosis warrants them.",
+        "It keeps brainstorming and writing-plans for the Task inside Scope.",
+        "It never invents Feature Design or Plan phases for the Bug or Task."
+      ]
+    },
+    {
+      "id": "superpowers-phase-ownership",
+      "title": "Keep Superpowers responsibilities in one delivery phase",
+      "purpose": "Prevent verification and delivery skills from leaking across Implement, Review, and Complete.",
+      "userInput": "Use locus:track to dry-run the Implement, Review, and Complete phases of an approved Feature. List the Superpowers skills each phase may select. Do not edit files or mutate remote state.",
+      "successChecklist": [
+        "Implement owns plan execution, test-first development, parallel or subagent topology, and implementation debugging; it does not select verification-before-completion.",
+        "Review owns requesting-code-review, receiving-code-review, and finishing-a-development-branch; it does not select verification-before-completion.",
+        "Complete owns verification-before-completion and does not repeat implementation or review skills."
+      ]
+    }
+  ]
+}
