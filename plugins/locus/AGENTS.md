@@ -12,7 +12,6 @@ workflow behavior; client metadata only adapts package discovery.
   - [`plugin.json`](.codex-plugin/plugin.json): Codex identity and interface metadata
 - [`examples/`](examples/): generic, publishable examples:
   - [`knowledge-map/`](examples/knowledge-map/AGENTS.md): private knowledge-map starting point
-- [`evals/`](evals/): repeatable, non-runtime skill behavior checks
 - [`skills/`](skills/): shared instruction-driven workflows:
   - [`find/`](skills/find/SKILL.md): owned-knowledge and active-work discovery
   - [`init/`](skills/init/SKILL.md): knowledge-document creation, refresh, and templates
@@ -29,8 +28,6 @@ workflow behavior; client metadata only adapts package discovery.
 ## Commands
 
 - Metadata: `jq empty plugin.json .codex-plugin/plugin.json`.
-- Track behavior, when Plugin Eval is installed: `plugin-eval benchmark skills/track --config evals/track/benchmark.json`.
-- Using behavior, when Plugin Eval is installed: `plugin-eval benchmark skills/using --config evals/using/benchmark.json`.
 
 ## Verification
 

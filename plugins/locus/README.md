@@ -18,7 +18,6 @@ distilling verified evidence, and choosing the smallest matching workflow.
   - [`plugin.json`](.codex-plugin/plugin.json): Codex identity and interface metadata
 - [`examples/`](examples/): generic, publishable examples:
   - [`knowledge-map/`](examples/knowledge-map/AGENTS.md): private knowledge-map starting point
-- [`evals/`](evals/): repeatable, non-runtime skill behavior checks
 - [`skills/`](skills/): shared instruction-driven workflows:
   - [`find/`](skills/find/SKILL.md): owned-knowledge and active-work discovery
   - [`init/`](skills/init/SKILL.md): knowledge-document creation, refresh, and templates
