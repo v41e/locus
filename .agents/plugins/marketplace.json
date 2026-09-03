@@ -1,7 +1,8 @@
 {
   "name": "v41e",
   "interface": {
-    "displayName": "v41e"
+    "displayName": "v41e",
+    "shortDescription": "Personal v41e plugins for active work and knowledge."
   },
   "plugins": [
     {
