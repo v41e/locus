@@ -1,64 +1,49 @@
 # GitHub Adapter
 
-## Capability Resolution
+Phase-specific GitHub synchronization for Locus Track.
 
-Before writing remote state:
+## Capability resolution
 
-1. Inspect the repository, organization, and owning Project metadata available
-   to the current identity.
-2. Map each logical concept to an existing native type, label, field, or status
-   only when an explicit rename, description, repository policy, automation, or
+Before any mutation:
+
+1. Inspect available repository, organization, and owning Project metadata.
+2. Map a logical concept only when a rename, description, policy, automation, or
    one-to-one meaning establishes the equivalent.
-3. Resolve every requested mutation as `logical -> existing (evidence)`. Without
-   that evidence, record `logical -> unmapped`, omit the remote mutation, and
-   report it. A plausible or sole candidate is not evidence when it could
-   represent multiple logical states; for example, `Ready -> Queue` is invalid
-   when Queue may also mean backlog.
+3. Record `logical -> existing [GitHub surface] (evidence)`. Record unmapped
+   concepts, omit their mutations, and report them. A plausible or sole
+   candidate is not evidence when its meaning is ambiguous.
 4. Never create, rename, disable, or delete GitHub configuration.
 
-GitHub Projects and structured metadata are optional. An Issue may exist
-without either.
+## Surfaces
 
-## State Mapping
+| Logical concept                | GitHub surface         |
+| ------------------------------ | ---------------------- |
+| Backlog record                 | Project draft          |
+| Formal remote work record      | Issue                  |
+| Approved specification or plan | Separate Issue comment |
+| Ready, active, review, or done | Mapped Project status  |
+| Delivery record                | Pull request           |
 
-| Logical concept                             | GitHub surface when available and authorized |
-| ------------------------------------------- | -------------------------------------------- |
-| Idea worth tracking                         | Project draft with the mapped backlog status |
-| Work requiring a formal repository contract | Issue with a mapped native type or label     |
-| Approved formal specification and plan      | Separate Issue comments                      |
-| Ready / active / review / done              | Unambiguous Project status options           |
-| Delivery and verification                   | Pull request when the delivery path uses one |
+## Phase references
 
-## Issue Bodies
+| Phase     | Reference                           |
+| --------- | ----------------------------------- |
+| Ideate    | [ideate.md](github/ideate.md)       |
+| Design    | [design.md](github/design.md)       |
+| Plan      | [plan.md](github/plan.md)           |
+| Triage    | [triage.md](github/triage.md)       |
+| Scope     | [scope.md](github/scope.md)         |
+| Implement | [implement.md](github/implement.md) |
+| Review    | [review.md](github/review.md)       |
+| Complete  | [complete.md](github/complete.md)   |
 
-Feature and Task Issues use `Problem`, `Solution`, optional `Alternatives`, and
-optional `Context`. Bug Issues use `Description`, `Current behavior`, `Expected
-behavior`, `Reproduction`, and optional `Environment`, `Logs`, and `Possible
-fix`. Omit empty optional sections.
+## Rules
 
-Do not copy the Issue URL, Project URL, phase, Project fields, local Tracking
-section, specification, or plan into the initial body. When approved local
-specification or plan artifacts exist, publish their snapshots as separate
-comments without local Tracking metadata.
-
-## Metadata
-
-- Apply the logical work type through an existing unambiguous Type or label.
-- Set available Priority and Effort equivalents once understood.
-- Set an available Start Date equivalent when implementation begins.
-- Set an available Target Date equivalent only for a real scheduling commitment.
-- Set Milestone only for a concrete release or dated target.
-- Add assignee and relationships only when ownership or dependency is real.
-- Remove intake-only triage labels after acceptance; preserve orthogonal labels.
-
-Human Issue Forms and pull-request templates belong to the repository. Follow
-them when present. Otherwise use a compact pull request with a related-Issue
-link, Summary, Verification, and material Notes.
-
-Do not infer that every work item needs an Issue. When its workflow makes
-tracking conditional and neither repository policy nor explicit intent resolves
-the condition, leave remote state unchanged and report what must be discovered.
-
-When a pull request targets a non-default integration branch, GitHub may not
-close linked Issues. After human merge, verify Issue closure and the mapped
-Project completion state explicitly.
+- The selected workflow defines phase order.
+- Mutate GitHub only when repository policy, explicit human direction, or an
+  existing owned record requires synchronization.
+- GitHub Projects and structured metadata are optional. An Issue may exist
+  without either.
+- Explicit human direction not to track remotely overrides existing tracking.
+- When tracking is conditional and no policy, human intent, or existing record
+  requires synchronization, leave GitHub unchanged.

@@ -2,24 +2,21 @@
 
 ## Preconditions
 
-The human agrees the Feature is ready for an approved design decision.
+The Feature is ready for a human design decision.
 
 ## Workflow
 
-1. Refine the problem, outcome, decisions, constraints, interfaces,
-   verification, and non-goals at the depth the risk requires.
-2. Use the smallest representation permitted by repository policy and explicit
-   human intent. For bounded, low-risk work, present the design inline.
-   Otherwise create or evolve a local specification in the expected owning
-   repository, moving or renaming its local draft when one exists. Relocate or
-   retire drafts stored in another repository. When ownership remains
-   unresolved, keep Design in chat or a cross-repository Project.
-3. Iterate until the human approves the design.
-4. Convert a linked Project draft or create an Issue only when a formal
-   repository contract is required. Keep the initial Issue concise and apply
-   only supported, unambiguous metadata.
-5. Publish an approved local specification as a separate Issue comment only
-   when both artifacts exist, omitting the local Tracking section.
+1. Define the problem, outcome, decisions, constraints, interfaces,
+   verification, and non-goals at proportional depth.
+2. Present bounded, low-risk designs inline. Otherwise create or update one
+   local specification in the expected owning repository.
+3. Move or retire drafts outside that repository. If ownership is unresolved,
+   keep Design in chat or a cross-repository planning surface.
+4. Iterate until the human approves the design.
+5. Promote a linked backlog record or create a formal remote record only when a
+   repository contract is required. Apply only supported, unambiguous metadata.
+6. When a local specification and formal remote record both exist, publish the
+   approved specification without local-only tracking metadata.
 
 ## Outcome
 

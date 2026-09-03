@@ -8,10 +8,9 @@ Observed behavior may contradict an existing expectation.
 
 1. Record expected and observed behavior.
 2. Establish the smallest reliable reproduction and supporting evidence.
-3. Confirm priority, ownership, and whether the defect is already sufficiently
-   diagnosed.
-4. Keep a human report untriaged until evidence confirms the defect; an
-   agent-discovered failure may proceed when its evidence is sufficient.
+3. Confirm priority, ownership, and whether the defect is sufficiently diagnosed.
+4. Keep a human report untriaged until evidence confirms the defect. An
+   agent-discovered failure may proceed with sufficient evidence.
 
 ## Outcome
 

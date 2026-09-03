@@ -2,21 +2,21 @@
 
 Use for observed behavior that contradicts an existing expectation.
 
-## Phases
+## Phase order
 
-| Phase     | Reference                              | Purpose                                            |
-| --------- | -------------------------------------- | -------------------------------------------------- |
-| Triage    | [triage.md](../phases/triage.md)       | Confirm the defect and acceptance evidence         |
-| Implement | [implement.md](../phases/implement.md) | Fix the shared root cause with regression evidence |
-| Review    | [review.md](../phases/review.md)       | Review through the authorized delivery path        |
-| Complete  | [complete.md](../phases/complete.md)   | Reconcile and verify the integrated result         |
+| Order | Phase                               | Purpose                                            |
+| ----- | ----------------------------------- | -------------------------------------------------- |
+| 1     | [Triage](../phases/triage.md)       | Confirm the defect and acceptance evidence         |
+| 2     | [Implement](../phases/implement.md) | Fix the shared root cause with regression evidence |
+| 3     | [Review](../phases/review.md)       | Review through the authorized delivery path        |
+| 4     | [Complete](../phases/complete.md)   | Reconcile and verify the integrated result         |
 
 ## Rules
 
-Create a direct Bug Issue only when explicit human intent, existing Project
-tracking, or the nearest repository policy requires it. Never create a Project
-draft for a Bug. If no tracking rule is known, leave GitHub unchanged and report
-the condition without blocking local diagnosis.
-
-Complexity does not turn a Bug into a Feature. Add a local design or plan only
-when risk warrants it; do not invent Feature ideation or a Project draft.
+- Create a formal remote Bug record only when human intent, existing tracking,
+  or repository policy requires it.
+- Never create a backlog record for a Bug. Without a tracking rule, leave remote
+  state unchanged and continue local diagnosis.
+- Complexity does not turn a Bug into a Feature.
+- Keep any design notes or execution plan inside Triage, and add them only when
+  risk warrants it. Never add Feature phases or a backlog record.

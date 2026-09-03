@@ -1,21 +1,24 @@
 # Superpowers Integration
 
-Use these preferred phase executors when they are installed:
+Phase-specific Superpowers skill selection for Locus Track.
 
-| Condition                                         | Skill                                        |
-| ------------------------------------------------- | -------------------------------------------- |
-| Feature Ideate or Design                          | `superpowers:brainstorming`                  |
-| Approved multi-step work entering Plan            | `superpowers:writing-plans`                  |
-| Bug investigation                                 | `superpowers:systematic-debugging`           |
-| Small, coupled, or linear implementation          | `superpowers:test-driven-development`        |
-| Independent bounded implementation workstreams    | `superpowers:dispatching-parallel-agents`    |
-| Approved plan executed in a separate task         | `superpowers:executing-plans`                |
-| Changes requested during Review                   | `superpowers:receiving-code-review`          |
-| Before completion claims or pull-request creation | `superpowers:verification-before-completion` |
-| Integration choice not governed locally           | `superpowers:finishing-a-development-branch` |
+## Phase references
 
-Nearest user and repository instructions take precedence. If they already
-define pull-request delivery and human merge, do not ask the integration-choice
-question again. When Superpowers is unavailable, use equivalent installed
-capabilities without skipping approval, diagnosis, test-first implementation,
-review, or verification boundaries.
+| Phase     | Reference                                |
+| --------- | ---------------------------------------- |
+| Ideate    | [ideate.md](superpowers/ideate.md)       |
+| Design    | [design.md](superpowers/design.md)       |
+| Plan      | [plan.md](superpowers/plan.md)           |
+| Triage    | [triage.md](superpowers/triage.md)       |
+| Scope     | [scope.md](superpowers/scope.md)         |
+| Implement | [implement.md](superpowers/implement.md) |
+| Review    | [review.md](superpowers/review.md)       |
+| Complete  | [complete.md](superpowers/complete.md)   |
+
+## Rules
+
+- Read only the current phase; its workflow owns order.
+- Apply every matching row; rows may combine.
+- User and repository instructions override this adapter.
+- If Superpowers is unavailable, use equivalent capabilities without weakening
+  phase gates.
