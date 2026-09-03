@@ -1,14 +1,14 @@
 # Architecture
 
-This document provides a high-level overview of the **Locus plugin repository**
+This document provides a high-level overview of the **v41e Plugins repository**
 architecture.
 
 ## 1. High-Level System Overview
 
 ```mermaid
 flowchart LR
-  catalog["Marketplace catalog"] --> plugin["Locus plugin package"]
-  plugin --> client["Compatible agent clients"]
+  catalog["Marketplace catalog"] --> plugins["Plugin packages"]
+  plugins --> client["Compatible agent clients"]
 ```
 
 ## 2. Core Components
